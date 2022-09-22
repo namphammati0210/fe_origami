@@ -1,17 +1,12 @@
 import Link from "./Link";
+import pages from "../MenuData";
 
 const Aside = () => {
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
-      <Link />
-      <Link />
-      <Link />
-      <Link />
-      <Link />
-      <Link />
-      <Link />
+    <div className="flex flex-col items-center">
+      {pages.map((page) => (
+        <Link name={page.name} path={page.path} />
+      ))}
     </div>
   );
 };

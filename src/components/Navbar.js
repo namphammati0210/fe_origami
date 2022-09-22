@@ -1,15 +1,17 @@
 import Link from "./Link";
+import pages from "../MenuData";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const loggedInUser = useSelector((state) => state.auth.email);
   return (
-    <div style={{ display: "flex", justifyContent: "center", gap: "30px" }}>
-      <Link />
-      <Link />
-      <Link />
-      <Link />
-      <Link />
-      <Link />
-      <Link />
+    <div className="flex flex-col items-center gap-[10px]">
+      <div>Welcome {loggedInUser} </div>
+      <div className="flex">
+        {pages.map((page) => (
+          <Link name={page.name} path={page.path} />
+        ))}
+      </div>
     </div>
   );
 };

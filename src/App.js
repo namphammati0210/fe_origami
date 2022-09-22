@@ -1,13 +1,8 @@
-import HomePage from "./pages/home";
-
+import AppRouter from "./routes";
 import "./App.css";
 
 function App() {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;

@@ -1,12 +1,17 @@
-import MainLayout from "../layouts/main";
-import HomeContainer from "../containers/HomeContainer";
+// import MainLayout from "../layouts/main";
+// import HomeContainer from "../containers/HomeContainer";
+import Post from "../components/Post/Post";
 
 const Home = () => {
   return (
     <>
-      <MainLayout>
-        <HomeContainer />
-      </MainLayout>
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </>
   );
 };
